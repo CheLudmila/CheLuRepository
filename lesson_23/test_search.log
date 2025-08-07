@@ -1,0 +1,7 @@
+2025-08-07 19:49:07,327 - INFO - GET /cars?sort_by=price&limit=5 => returned 5 cars
+2025-08-07 19:49:07,345 - INFO - GET /cars?sort_by=year&limit=3 => returned 3 cars
+2025-08-07 19:49:07,363 - INFO - GET /cars?sort_by=engine_volume&limit=7 => returned 7 cars
+2025-08-07 19:49:07,381 - INFO - GET /cars?sort_by=brand&limit=10 => returned 10 cars
+2025-08-07 19:49:07,396 - INFO - GET /cars?sort_by=price&limit=1 => returned 1 cars
+2025-08-07 19:49:07,409 - INFO - GET /cars?sort_by=year&limit=15 => returned 15 cars
+2025-08-07 19:49:07,424 - INFO - GET /cars?sort_by=brand&limit=25 => returned 25 cars
