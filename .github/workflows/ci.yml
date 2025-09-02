@@ -36,17 +36,19 @@ jobs:
         name: test-results
         path: reports/results.xml
 
-    - name: Send email notification
-      if: always()
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        username: ${{ secrets.EMAIL_USERNAME }}
-        password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "Python CI Pipeline - ${{ github.repository }}"
-        body: |
-          Статус виконання workflow: ${{ job.status }}
-          Build URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        to: InsertYour@Mail.Here
-        secure: true
+   name: Send email notification
+  if: always()
+  uses: dawidd6/action-send-mail@v3
+  with:
+    server_address: smtp.gmail.com
+    server_port: 465
+    username: ${{ secrets.EMAIL_USERNAME }}
+    password: ${{ secrets.EMAIL_PASSWORD }}
+    from: Sapphire777.astro@gmail.com   # твоя пошта
+    to: InsertYour@Mail.Here             # можна залишити свою або іншу
+    subject: "Python CI Pipeline - ${{ github.repository }}"
+    body: |
+      Статус виконання workflow: ${{ job.status }}
+      Build URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    secure: true
+
